@@ -1,0 +1,9 @@
+##
+## Reference Template
+## These settings should be used for work-related repos
+##
+[user]
+  name = Lance Morgan
+  email = lance.morgan@extendhealth.com	
+[commit]
+  template = ~/commit-template.txt
