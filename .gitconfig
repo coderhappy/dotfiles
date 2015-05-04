@@ -16,7 +16,7 @@
   #############
   b = branch
   ba = branch -a
-  bd = branch -d
+  bd = branch -D
   br = branch -r
   #############
   c = commit
