@@ -12,7 +12,7 @@ let g:mapleader = ','
 syntax enable
 silent! colorscheme solarized  " Suppress error messages if colorscheme not on machine
 set background=dark            " Tell vim what background color looks like
-let g:solarized_termcolors=16 
+let g:solarized_termcolors=256 
 
 " =============================
 " General Settings
@@ -49,7 +49,7 @@ set shiftwidth=2               " Number of spaces to use for each step of (auto)
 " =============================
 " Copy, Paste, Select Settings
 " =============================
-set selection=exclusive        " Exclude first character after selection
+set selection=inclusive        " Include first character after selection
 set clipboard=unnamed          " Use OS clipboard by default
 
 " =============================
