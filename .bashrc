@@ -1,28 +1,42 @@
-#########
-# Aliases
-#########
-# Lists
+#############
+## Aliases ##
+#############
+
+#### Lists ####
 alias ls='ls --color'
 alias lsa='ls -a --color'
 alias lssa='ls -sa --color'
 alias role='whoami -groups -fo list | grep -i'
 alias ff='find . -type f -name'
 
-# Repo Nav
+#### Directory Nav ####
 alias home='cd ~'
 alias work='cd ~/Home/work'
 alias sandbox='cd ~/Home/sandbox'
-
-# Visual Studio
-alias ss='start src/*.sln'
-
-# Work Specific
-alias bake='bundle exec rake'
 alias oe='cd ~/Home/work/one-exchange'
 
+#### Webpack ####
+alias wp='webpack --colors --progress'
+alias wpw='webpack --colors --progress --watch'
+
+#### Git ####
+alias gitk='gitk &'
+alias gitka='gitk --all'
+
+#### Visual Studio ####
+alias ss='start src/*.sln'
+
+#### Ruby/Bundler ####
+alias bake='bundle exec rake'
+
+#### Favorite Repos ####
+alias oe='cd ~/Home/work/one-exchange'
+
+
 #########
-# SSH
+## SSH ##
 #########
+
 SSH_ENV=$HOME/.ssh/environment
    
 # start the ssh-agent
