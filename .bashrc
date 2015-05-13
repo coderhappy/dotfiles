@@ -1,11 +1,29 @@
+#!/bin/bash
+
+##############
+## Platform ##
+##############
+platform='unknown'
+if [ "$(uname)" == "Darwin" ]; then
+    platform='mac_osx'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    platform='linux'
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    platform='win_nt'
+fi
+
 #############
 ## Aliases ##
 #############
 
 #### Lists ####
-alias ls='ls --color'
-alias lsa='ls -a --color'
-alias lssa='ls -sa --color'
+if [[ $platform == 'win_nt' ]]; then
+   alias ls='ls --color=auto'
+elif [[ $platform == 'mac_osx' ]]; then
+   alias ls='ls -G'
+fi
+alias lsa='ls -a'
+alias lssa='ls -sa'
 alias role='whoami -groups -fo list | grep -i'
 alias ff='find . -type f -name'
 
